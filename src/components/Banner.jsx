@@ -1,6 +1,6 @@
 import {useState, useEffect} from "react";
 import {Container, Row, Col} from "react-bootstrap";
-import headerImg from "../assets/inImage/cybersecurity-pixabay-1-1693900006-removebg-preview.png";
+import headerImg from "../assets/b.svg";
 import {ArrowRightCircle} from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -54,25 +54,26 @@ export const Banner = () => {
         setLoading(false);
     };
     return (
-        <section className="banner" id="home" onLoad={handleImageLoad}>
+        <section className={`banner ${loading ? 'loading' : ''}`} id="home">
             <Container>
-                <Row className="aligh-items-center">
+                <Row className="align-items-center">
                     <Col xs={12} md={6} xl={7}>
                         {loading && <div className="loader"></div>}
                         <TrackVisibility>
-                            {({isVisible}) =>
+                            {({ isVisible }) =>
                                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                                     <h1>{`ArmorCore`} <span className="txt-rotate" dataPeriod="1000"
-                                                            data-rotate='[ "Securing businesses in a complex digital world", "Web Designer" ]'><span
-                                        className="wrap">{text}</span></span></h1>
+                                                            data-rotate='[ "Securing businesses in a complex digital world", "Web Designer" ]'>
+                                        <span className="wrap">{text}</span></span></h1>
                                     <p>Defend what matters most, because data breaches are not an option.</p>
                                     <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle
-                                        size={25}/></button>
+                                        size={25} /></button>
                                 </div>}
                         </TrackVisibility>
                     </Col>
                 </Row>
             </Container>
+            <img src={headerImg} alt="Background" style={{ display: 'none' }} onLoad={handleImageLoad} />
         </section>
     )
 }
