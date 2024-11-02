@@ -48,12 +48,17 @@ export const Banner = () => {
             setIndex(prevIndex => prevIndex + 1);
         }
     }
+    const [loading, setLoading] = useState(true);
 
+    const handleImageLoad = () => {
+        setLoading(false);
+    };
     return (
-        <section className="banner" id="home">
+        <section className="banner" id="home" onLoad={handleImageLoad}>
             <Container>
                 <Row className="aligh-items-center">
                     <Col xs={12} md={6} xl={7}>
+                        {loading && <div className="loader"></div>}
                         <TrackVisibility>
                             {({isVisible}) =>
                                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
@@ -63,14 +68,6 @@ export const Banner = () => {
                                     <p>Defend what matters most, because data breaches are not an option.</p>
                                     <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle
                                         size={25}/></button>
-                                </div>}
-                        </TrackVisibility>
-                    </Col>
-                    <Col xs={12} md={6} xl={5}>
-                        <TrackVisibility>
-                            {({isVisible}) =>
-                                <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                                    <img src={headerImg} alt="Header Img"/>
                                 </div>}
                         </TrackVisibility>
                     </Col>
