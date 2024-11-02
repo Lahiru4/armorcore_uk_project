@@ -299,9 +299,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .banner.loading {
-  backdrop-filter: blur(10px); /* Adjust the blur amount */
-  /* You can also set an opaque background color if needed */
-  background-color: rgba(255, 255, 255, 0.5); /* Light background */
+    backdrop-filter: blur(10px);
 }
 
 .banner .tagline {
