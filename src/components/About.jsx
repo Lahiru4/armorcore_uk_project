@@ -31,10 +31,10 @@ export const About = () => {
                             <h2>About</h2>
                             <p>ArmorCore is a cutting-edge cybersecurity firm dedicated to safeguarding businesses in an increasingly complex digital landscape.<br></br>  Founded in 2022, our mission is to provide robust, innovative, and tailored security solutions that empower organizations to thrive in the face of evolving cyber threats. At ArmorCore, we understand that every business has unique security needs. Our team of elite cybersecurity experts combines deep industry knowledge with state-of-the-art technology to deliver comprehensive protection across all digital assets. We offer a wide range of services, including.</p>
                             <div className={"aboutCountBox"}>
-                                <h5 className={"about"}>Address : <span style={{color:'#B8B8B8'}}>colombo 07 galla rode bambalapitiya</span></h5><br/>
-                                <h5 className={"about"}>Zip code : <span style={{color:'#B8B8B8'}}>2500</span></h5><br/>
+                                {/*<h5 className={"about"}>Address : <span style={{color:'#B8B8B8'}}>colombo 07 galla rode bambalapitiya</span></h5><br/>
+                                <h5 className={"about"}>Zip code : <span style={{color:'#B8B8B8'}}>2500</span></h5><br/>*/}
                                 <h5 className={"about"}>Email : <span style={{color:'#B8B8B8'}}>info@armorcore.com</span></h5><br/>
-                                <h5 className={"about"}>Phone : <span style={{color:'#B8B8B8'}} > 011 234 2343</span></h5>
+                                {/*<h5 className={"about"}>Phone : <span style={{color:'#B8B8B8'}} > 011 234 2343</span></h5>*/}
                             </div>
 
                             <img src={aboutSubImage} alt="Header Img" className={"aboutSubImage"}
