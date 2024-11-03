@@ -48,32 +48,34 @@ export const Banner = () => {
             setIndex(prevIndex => prevIndex + 1);
         }
     }
-    const [loading, setLoading] = useState(true);
 
-    const handleImageLoad = () => {
-        setLoading(false);
-    };
     return (
-        <section className={`banner ${loading ? 'loading' : ''}`} id="home">
+        <section className="banner" id="home">
             <Container>
-                <Row className="align-items-center">
+                <Row className="aligh-items-center">
                     <Col xs={12} md={6} xl={7}>
-                        {loading && <div className="loader"></div>}
                         <TrackVisibility>
-                            {({ isVisible }) =>
+                            {({isVisible}) =>
                                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                                     <h1>{`ArmorCore`} <span className="txt-rotate" dataPeriod="1000"
-                                                            data-rotate='[ "Securing businesses in a complex digital world", "Web Designer" ]'>
-                                        <span className="wrap">{text}</span></span></h1>
+                                                            data-rotate='[ "Securing businesses in a complex digital world", "Web Designer" ]'><span
+                                        className="wrap">{text}</span></span></h1>
                                     <p>Defend what matters most, because data breaches are not an option.</p>
                                     <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle
-                                        size={25} /></button>
+                                        size={25}/></button>
+                                </div>}
+                        </TrackVisibility>
+                    </Col>
+                    <Col xs={12} md={6} xl={5}>
+                        <TrackVisibility>
+                            {({isVisible}) =>
+                                <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
+                                    <img src={headerImg} alt="Header Img"/>
                                 </div>}
                         </TrackVisibility>
                     </Col>
                 </Row>
             </Container>
-            <img src={headerImg} alt="Background" style={{ display: 'none' }} onLoad={handleImageLoad} />
         </section>
     )
 }

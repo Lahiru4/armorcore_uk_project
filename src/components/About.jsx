@@ -38,7 +38,7 @@ export const About = () => {
                             </div>
 
                             <img src={aboutSubImage} alt="Header Img" className={"aboutSubImage"}
-                                 style={{width:'332px',
+                                 style={{width:'200px',
                                      position:'absolute',
                                      top:'45%',
                                      left:'9%'}}

@@ -268,24 +268,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 /************ Banner Css ************/
-.loader {
-  border: 8px solid #f3f3f3; /* Light grey */
-  border-top: 8px solid #3498db; /* Blue */
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  animation: spin 1s linear infinite;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* Center the loader */
-  z-index: 1000; /* Make sure it’s above other content */
-}
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
 
 .banner {
   margin-top: 0;
@@ -296,10 +279,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-repeat: no-repeat;
   height: 832px;
   transition: backdrop-filter 0.3s ease; /* Smooth transition for blur */
-}
-
-.banner.loading {
-    backdrop-filter: blur(10px);
 }
 
 .banner .tagline {
@@ -748,7 +727,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /* Responsive*/
 @media (min-width: 800px) and (max-width: 1200px) {
   .aboutSubImage {
-    width: 270px !important;
+    width: 200px !important;
     position: absolute;
     top: 45% !important;
     left: 2% !important;
