@@ -19,9 +19,9 @@ export const Projects = () => {
 
     const projects = [
         {
-            title: "Employee Training",
-            description: "Engaging security training, phishing tests, role-based programs.",
-            imgUrl: s_image_6,
+            title: "Security Consulting",
+            description: "Strategic security roadmap and tailored architecture design solutions.",
+            imgUrl: s_image_5,
         },
         {
             title: "Security Audits",
@@ -32,21 +32,20 @@ export const Projects = () => {
             title: "Managed Security Services",
             description: "We assess your organization's resilience to human-centric attack vectors.",
             imgUrl: s_image_3,
-        },
-        {
-            title: "Incident Response",
-            description: "Expert security response, forensics, malware analysis, recovery support.",
-            imgUrl: s_image_4,
-        },
-        {
-            title: "Security Consulting",
-            description: "Strategic security roadmap and tailored architecture design solutions.",
-            imgUrl: s_image_5,
+        },{
+            title: "Employee Training",
+            description: "Engaging security training, phishing tests, role-based programs.",
+            imgUrl: s_image_6,
         },
         {
             title: "GRC Services",
             description: "Design & Development",
             imgUrl: s_image_7,
+        },
+        {
+            title: "Incident Response",
+            description: "Expert security response, forensics, malware analysis, recovery support.",
+            imgUrl: s_image_4,
         },
     ];
 
